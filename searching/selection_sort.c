@@ -13,7 +13,7 @@ int main() {
         smallest=j; // assume current index holds the smallest value
         // loop to find the index holding smallest value
         for(i=j+1;i<n;i++){
-            // if element to the right is smaller then element to the left we make that index as smallest
+            // if element to the right is smaller than element to the left we make that index as smallest
             if(a[i]<a[smallest]){
                 smallest=i;
             }
