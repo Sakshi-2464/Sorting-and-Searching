@@ -6,8 +6,8 @@ void merge(char a[], int l, int mid, int r){
     int n1=mid-l+1;
     int n2=r-mid;
     // declare the temporary sub arrays
-    int L[n1];
-    int R[n2];
+    char L[n1];
+    char R[n2];
     // copy contents to these arrays
     for(i=0;i<n1;i++){
         L[i]=a[l+i];
