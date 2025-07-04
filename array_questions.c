@@ -197,4 +197,24 @@ int main(){
     printf("%d",e-o);
     return 0;
 }
+// check for duplicate values in array
+#include <stdio.h>
+int main() {
+    int a[]={2,5,6,90};
+    int n=sizeof(a)/sizeof(a[0]);
+    int found=0;
+    for(int i=0;i<n;i++){
+        for(int j=i+1;j<n;j++){
+            if(a[i]==a[j]){
+                found=1;
+                printf("duplicates found: %d\n", a[i]);
+                break;
+            }
+        }
+    }
+    if(!found){
+        printf("no duplicates");
+    }
+    return 0;
+}
 //
