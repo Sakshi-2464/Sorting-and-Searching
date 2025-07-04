@@ -10,7 +10,7 @@ int main(){
     printf("%d\n",c);
     return 0;
 }
-// finding min and mx element from array
+// finding min and max element from array
 #include<stdio.h>
 int main(){
     int a[]={2,5,0,3};
