@@ -156,7 +156,6 @@ int main(){
 }
 // get even and odd elemens in 2 different arrays
 #include<stdio.h>
-#include<stdbool.h>
 int main(){
     int a[]={57,2,4,9,10,120,5};
     int n=sizeof(a)/sizeof(a[0]);
@@ -182,7 +181,6 @@ int main(){
 }
 // difference between sum of even elements an sum of odd elements
 #include<stdio.h>
-#include<stdbool.h>
 int main(){
     int a[]={2,4,5,0,3};
     int n=sizeof(a)/sizeof(a[0]);
