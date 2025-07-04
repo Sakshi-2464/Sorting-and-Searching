@@ -217,4 +217,29 @@ int main() {
     }
     return 0;
 }
+// n-th largest element in array
+#include <stdio.h>
+int main() {
+    int a[]={2,5,0,4,7};
+    int n=sizeof(a)/sizeof(a[0]);
+    for(int i=0;i<n;i++){
+        for(int j=i+1;j<n;j++){
+            if(a[i]<a[j]){
+                int temp=a[i];
+                a[i]=a[j];
+                a[j]=temp;
+            }
+        }
+    }
+    printf("enter value for m:(mth element needed)\n");
+    int m;
+    scanf("%d",&m);
+    if(m>0 && m<=n){
+        printf("%d th largest element is: %d\n",m,a[m-1]);
+    }
+    else{
+        printf("enter valid value");
+    }
+    return 0;
+}
 //
