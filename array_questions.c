@@ -180,4 +180,23 @@ int main(){
     }
     return 0;
 }
+// difference between sum of even elements an sum of odd elements
+#include<stdio.h>
+#include<stdbool.h>
+int main(){
+    int a[]={2,4,5,0,3};
+    int n=sizeof(a)/sizeof(a[0]);
+    int e=0;
+    int o=0;
+    for(int i=0;i<n;i++){
+        if(a[i]%2 ==0){
+            e+=a[i];
+        }
+        else{
+            o+=a[i];
+        }
+    }
+    printf("%d",e-o);
+    return 0;
+}
 //
