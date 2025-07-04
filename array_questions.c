@@ -95,3 +95,42 @@ int main(){
     }
     return 0;
 }
+// second largest element in array
+#include<stdio.h>
+int main(){
+    int a[]={2,5,0,4,8,33};
+    int n=sizeof(a)/sizeof(a[0]);
+    int max=a[0];
+    int secondmax=-1;
+    for(int i=1;i<n;i++){
+        if(a[i]>max){
+            secondmax=max;
+            max=a[i];
+        }
+        else if(a[i]>secondmax && a[i]!=max){
+            secondmax=a[i];
+        }
+    }
+    printf("%d",secondmax);
+    return 0;
+}
+// remove duplicates from sorted array
+#include<stdio.h>
+int main(){
+    int a[]={2,5,5,6,7,8,8,33};
+    int n=sizeof(a)/sizeof(a[0]);
+    int i=0;
+    for(int j=1;j<n;j++){
+        if(a[j]!=a[i]){
+            i++;
+            a[i]=a[j];
+        }
+    }
+    int len=i+1;
+    printf("%d\n",len);
+    for(i=0;i<len;i++){
+        printf(" %d",a[i]);   
+    }
+    return 0;
+}
+//
