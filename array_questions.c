@@ -133,4 +133,25 @@ int main(){
     }
     return 0;
 }
-//
+// check for palindrome
+#include<stdio.h>
+#include<stdbool.h>
+int main(){
+    int a[]={5,6,6,7,6,5};
+    int n=sizeof(a)/sizeof(a[0]);
+    bool b=true;
+    for(int i=0;i<n/2;i++){
+    if(a[n-1-i]!=a[i]){
+        b=false;
+        break;
+        }
+    }
+    if(!b){
+        printf("not a palindrome");
+    }
+    else{
+        printf("is a palindrome");
+    }
+    return 0;
+}
+
