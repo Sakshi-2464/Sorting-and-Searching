@@ -154,4 +154,30 @@ int main(){
     }
     return 0;
 }
-
+// get even and odd elemens in 2 different arrays
+#include<stdio.h>
+#include<stdbool.h>
+int main(){
+    int a[]={57,2,4,9,10,120,5};
+    int n=sizeof(a)/sizeof(a[0]);
+    int even[n];
+    int odd[n];
+    int e=0;
+    int o=0;
+    for(int i=0;i<n;i++){
+        if(a[i]%2 ==0){
+            even[e++]=a[i];
+        }
+        else{
+            odd[o++]=a[i];
+        }
+    }
+    for(int i=0;i<e;i++){
+    printf(" %d",even[i]);}
+    printf("\n");
+    for(int i=0;i<o;i++){
+    printf(" %d",odd[i]);
+    }
+    return 0;
+}
+//
