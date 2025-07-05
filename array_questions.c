@@ -256,4 +256,234 @@ int main(){
         printf(" %d",a[i]);
     }
 }
+// get smallest positive integer from array
+#include<stdio.h>
+int main(){
+    int a[]={-22,-4,88,6,-9,7,-8};
+    int n=sizeof(a)/sizeof(a[0]);
+    int m=-1;
+    for(int i=0;i<n;i++){
+        if(a[i]>0){
+            if(m==-1 || a[i]<m){
+                m=a[i];
+            }   
+        }
+    }
+    if(m==-1){
+        printf("no positive integer exist");
+    }
+    else
+    {
+        printf("smallest positive integer: %d",m);
+    }
+}
+// get largest positive integer from array
+#include<stdio.h>
+int main(){
+    int a[]={-22,-4,88,6,-9,7,-8};
+    int n=sizeof(a)/sizeof(a[0]);
+    int m=-1;
+    for(int i=0;i<n;i++){
+        if(a[i]>0){
+            if(m==-1 || a[i]>m){
+                m=a[i];
+            }   
+        }
+    }
+    if(m==-1){
+        printf("no positive integer exist");
+    }
+    else
+    {
+        printf("largest positive integer: %d",m);
+    }
+}
+// get largest negative integer form array
+#include<stdio.h>
+int main(){
+    int a[]={22,8,-7,-9,55};
+    int n=sizeof(a)/sizeof(a[0]);
+    int m=-1;
+    for(int i=0;i<n;i++){
+        if(a[i]<0){
+            if(m==-1 || a[i]>m){
+                m=a[i];
+            }   
+        }
+    }
+    if(m==-1){
+        printf("no negative integer exist");
+    }
+    else
+    {
+        printf("largest negative integer: %d",m);
+    }
+}
+// get smallest negative integer from array
+#include<stdio.h>
+int main(){
+    int a[]={22,8,-7,-9,55};
+    int n=sizeof(a)/sizeof(a[0]);
+    int m=-1;
+    for(int i=0;i<n;i++){
+        if(a[i]<0){
+            if(m==-1 || a[i]<m){
+                m=a[i];
+            }   
+        }
+    }
+    if(m==-1){
+        printf("no negative integer exist");
+    }
+    else
+    {
+        printf("smallest negative integer: %d",m);
+    }
+}
+// count number of positive and number of negative integers and number of zeros
+#include<stdio.h>
+int main(){
+    int a[]={22,8,-7,0,10,-57,0,6,-9,55};
+    int n=sizeof(a)/sizeof(a[0]);
+    int pos=0;
+    int neg=0;
+    int zero=0;
+    for(int i=0;i<n;i++){
+        if(a[i]>0){
+            pos++;   
+        }
+        else if(a[i]<0){
+            neg++;
+        }
+        else{
+            zero++;
+        }
+    }
+    printf("number of positive integers: %d\n",pos);
+    printf("number of begative integers: %d\n",neg);
+    printf("number of zeros: %d",zero);
+}
+// sum of all positive inetegers and sum of all negative integers
+#include<stdio.h>
+int main(){
+    int a[]={2,4,0,-2,0,-4};
+    int n=sizeof(a)/sizeof(a[0]);
+    int pos_sum=0;
+    int neg_sum=0;
+    for(int i=0;i<n;i++){
+        if(a[i]>0){
+            pos_sum+=a[i];   
+        }
+        else if(a[i]<0){
+            neg_sum+=a[i];
+        }
+    }
+    printf("sum of positive integers: %d\n",pos_sum);
+    printf("sum of negative integers: %d",neg_sum);
+}
+// get all positive inetgers in ascending order
+#include<stdio.h>
+int main(){
+    int a[]={6,9,8,2,-4,0,-2,0,-4};
+    int n=sizeof(a)/sizeof(a[0]);
+    int pos_arr[n];
+    int i=0;
+    int j=0;
+    for(int i=0;i<n;i++){
+        if(a[i]>0){
+            pos_arr[j++]=a[i];   
+        }
+    }
+    for(i=0;i<j;i++){
+        for(int k=0;k<j-i-1;k++){
+            if(pos_arr[k]>pos_arr[k+1]){
+                int temp=pos_arr[k];
+                pos_arr[k]=pos_arr[k+1];
+                pos_arr[k+1]=temp;
+            }
+        }
+    }
+    for(i=0;i<j;i++){
+        printf(" %d",pos_arr[i]);
+    }
+}
+// positive integers in descending order
+#include<stdio.h>
+int main(){
+    int a[]={6,9,8,2,-4,0,-2,0,-4};
+    int n=sizeof(a)/sizeof(a[0]);
+    int pos_arr[n];
+    int i=0;
+    int j=0;
+    for(int i=0;i<n;i++){
+        if(a[i]>0){
+            pos_arr[j++]=a[i];   
+        }
+    }
+    for(i=0;i<j;i++){
+        for(int k=0;k<j-i-1;k++){
+            if(pos_arr[k]<pos_arr[k+1]){
+                int temp=pos_arr[k];
+                pos_arr[k]=pos_arr[k+1];
+                pos_arr[k+1]=temp;
+            }
+        }
+    }
+    for(i=0;i<j;i++){
+        printf(" %d",pos_arr[i]);
+    }
+}
+// negative integers in descending order
+#include<stdio.h>
+int main(){
+    int a[]={6,9,8,2,-4,0,-2,0,-4};
+    int n=sizeof(a)/sizeof(a[0]);
+    int neg_arr[n];
+    int i=0;
+    int j=0;
+    for(int i=0;i<n;i++){
+        if(a[i]<0){
+            neg_arr[j++]=a[i];   
+        }
+    }
+    for(i=0;i<j;i++){
+        for(int k=0;k<j-i-1;k++){
+            if(neg_arr[k]<neg_arr[k+1]){
+                int temp=neg_arr[k];
+                neg_arr[k]=neg_arr[k+1];
+                neg_arr[k+1]=temp;
+            }
+        }
+    }
+    for(i=0;i<j;i++){
+        printf(" %d",neg_arr[i]);
+    }
+}
+// negative integers in ascending order
+#include<stdio.h>
+int main(){
+    int a[]={6,9,8,2,-4,0,-2,0,-4};
+    int n=sizeof(a)/sizeof(a[0]);
+    int neg_arr[n];
+    int i=0;
+    int j=0;
+    for(int i=0;i<n;i++){
+        if(a[i]<0){
+            neg_arr[j++]=a[i];   
+        }
+    }
+    for(i=0;i<j;i++){
+        for(int k=0;k<j-i-1;k++){
+            if(neg_arr[k]>neg_arr[k+1]){
+                int temp=neg_arr[k];
+                neg_arr[k]=neg_arr[k+1];
+                neg_arr[k+1]=temp;
+            }
+        }
+    }
+    for(i=0;i<j;i++){
+        printf(" %d",neg_arr[i]);
+    }
+}
 //
+
