@@ -13,7 +13,7 @@ int main(){
     // bubble sort
     for(i=0;i<n;i++){
         // loop to traverse through the whole array
-        // in each pass the largest elememt move to the end of the insorted array
+        // in each pass the largest elememt move to the end of the unsorted array
         for(j=0;j<n-1-i;j++){
             // loop to compare all elements
             if(a[j]>a[j+1]){
