@@ -514,4 +514,25 @@ int main(){
     printf("%d",s-c);
     return 0;
 }
-
+// find leader element in array
+// an element is leader if it is greater than all the elements to its right 
+#include <stdio.h>
+#include<stdbool.h>
+int main(){
+    int a[]={2,5,6,7,4,1};
+    int n=sizeof(a)/sizeof(a[0]);
+    int i,j;
+    for(i=0;i<n;i++){
+            bool b=true;
+        for(j=i+1;j<n;j++){
+            if(a[j]>a[i]){
+                b= false;
+                break;
+            }
+        }
+    if(b){
+        printf(" %d",a[i]);
+        }
+    }
+    return 0;
+}
