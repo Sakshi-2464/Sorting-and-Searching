@@ -39,4 +39,28 @@ int main(){
     printf("%s",s);
     return 0;
 }
+// check if string is palindrome
+#include<stdio.h>
+#include<stdbool.h>
+int main(){
+    char s[]="level";
+    int j=0;
+    bool b=true;
+    while(s[j]!='\0'){
+        j++;
+    }
+    for(int i=0;i<j/2;i++){
+        if(s[j-1-i]!=s[i]){
+            b=false;
+            break;
+        }
+    }
+    if(b){
+        printf("palindrome");
+    }
+    else{
+        printf("not a palindrome");
+    }
+    return 0;
+}
 //
