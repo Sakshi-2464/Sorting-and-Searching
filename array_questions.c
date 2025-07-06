@@ -500,5 +500,18 @@ int main(){
         printf(" %d",neg_arr[i]);
     }
 }
-//
+//Find the Missing Number
+//Given n-1 numbers in range 1 to n, find the missing one.
+#include<stdio.h>
+int main(){
+    int a[]={2,1,3,6,7,4};
+    int n=sizeof(a)/sizeof(a[0])+1;
+    int c=0;
+    int s=n*(n+1)/2;
+    for(int i=0;i<n-1;i++){
+        c+=a[i];
+    }
+    printf("%d",s-c);
+    return 0;
+}
 
