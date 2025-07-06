@@ -24,3 +24,19 @@ int main(){
     return 0;
 }
 // reverse of string
+#include<stdio.h>
+int main(){
+    char s[]="function";
+    int j=0;
+    while(s[j]!='\0'){
+        j++;
+    }
+    for(int i=0;i<j/2;i++){
+        char temp=s[i];
+        s[i]=s[j-1-i];
+        s[j-1-i]=temp;
+    }
+    printf("%s",s);
+    return 0;
+}
+//
