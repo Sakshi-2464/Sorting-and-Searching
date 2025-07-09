@@ -536,3 +536,41 @@ int main(){
     }
     return 0;
 }
+// move all zeros to right
+#include<stdio.h>
+int main(){
+    int a[]={2,0,0,56,9,0,12,0,6,0,8};
+    int n=sizeof(a)/sizeof(a[0]);
+    int j=0;
+    for(int i=0;i<n;i++){
+        if(a[i]!=0){
+            a[j++]=a[i];
+        }
+    }
+    while(j<n){
+        a[j++]=0;
+    }
+    for(int i=0;i<n;i++){
+        printf(" %d",a[i]);
+    }
+    return 0;
+}
+//move all zeros to left
+#include<stdio.h>
+int main(){
+    int a[]={2,56,9,0,12,0,6,0,8};
+    int n=sizeof(a)/sizeof(a[0]);
+    int j=n-1;
+    for(int i=n-1;i>=0;i--){
+        if(a[i]!=0){
+            a[j--]=a[i];
+        }
+    }
+    while(j>=0){
+        a[j--]=0;
+    }
+    for(int i=0;i<n;i++){
+        printf(" %d",a[i]);
+    }
+    return 0;
+}
