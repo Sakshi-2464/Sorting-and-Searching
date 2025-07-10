@@ -650,3 +650,24 @@ int main(){
     }
     return 0;
 }
+// 2-sum
+#include<stdio.h>
+int main(){
+    int a[]={2,7,1,8,11,15};
+    int n=sizeof(a)/sizeof(a[0]);
+    int target=9;
+    int found=0;
+    for(int i=0;i<n;i++){
+        for(int j=i+1;j<n;j++){
+            if(a[i]+a[j]==target){
+                printf("indices: %d %d\n",i,j);
+                printf("values: %d %d\n",a[i],a[j]);
+                found=1;
+            }
+        }
+    }
+    if(!found){
+    printf("no pairs");}
+    return 0;
+}
+//
