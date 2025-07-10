@@ -626,4 +626,27 @@ int main() {
 
     return 0;
 }
-//
+// remove duplicates from unsorted array
+#include<stdio.h>
+int main(){
+    int a[]={2,4,3,3,5,2,6,4,8};
+    int n=sizeof(a)/sizeof(a[0]);
+    int results[n];
+    int k=0;
+    for(int i=0;i<n;i++){
+        int duplicate=0;
+        for(int j=0;j<k;j++){
+            if(a[i]==results[j]){
+                duplicate=1;
+                break;
+            }
+        }
+        if(!duplicate){
+            results[k++]=a[i];
+        }
+    }
+    for(int i=0;i<k;i++){
+        printf(" %d",results[i]);
+    }
+    return 0;
+}
