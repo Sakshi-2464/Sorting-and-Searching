@@ -574,3 +574,56 @@ int main(){
     }
     return 0;
 }
+// prefix sum array
+#include<stdio.h>
+
+int main() {
+    // Original array
+    int a[] = {2, 6, 3, 5, 8, 9, 4};
+
+    // Calculate size of array
+    int n = sizeof(a) / sizeof(a[0]);
+
+    // Declare prefix sum array
+    int prefix[n];
+
+    // Initialize first element of prefix array
+    prefix[0] = a[0];
+
+    // Build prefix sum array
+    // Each prefix[i] = a[0] + a[1] + ... + a[i]
+    for(int i = 1; i < n; i++) {
+        prefix[i] = prefix[i - 1] + a[i];
+    }
+
+    // Print the prefix sum array
+    printf("Prefix array:\n");
+    for(int i = 0; i < n; i++) {
+        printf(" %d", prefix[i]);
+    }
+
+    // Ask user for a range (L to R)
+    printf("\nEnter the range for prefix (L R):\n");
+    int L, R, sum;
+    scanf("%d %d", &L, &R);
+
+    // Validate the range
+    if (L < 0 || R >= n || L > R) {
+        printf("Invalid range\n");
+    } else {
+        // If L is 0, prefix[R] is the sum directly
+        if (L == 0) {
+            sum = prefix[R];
+        }
+        // Else, subtract prefix[L-1] to get range sum
+        else {
+            sum = prefix[R] - prefix[L - 1];
+        }
+
+        // Print the result
+        printf("Sum of array elements from index %d to %d is %d\n", L, R, sum);
+    }
+
+    return 0;
+}
+//
