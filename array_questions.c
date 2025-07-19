@@ -603,7 +603,7 @@ int main() {
     }
 
     // Ask user for a range (L to R)
-    printf("\nEnter the range for prefix (L R):\n");
+    printf("\nEnter the range for prefix (L - R):\n");
     int L, R, sum;
     scanf("%d %d", &L, &R);
 
