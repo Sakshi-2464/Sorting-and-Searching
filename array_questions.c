@@ -701,3 +701,42 @@ int main(){
     }
     return 0;
 }
+// finding subarrays with given sum
+#include<stdio.h>
+void subarray(int a[], int n, int target){
+    int i,j,k,found=0;
+    for(i=0;i<n;i++){
+        int sum=0;
+        for(j=i;j<n;j++){
+            sum+=a[j];
+            if(sum==target){
+                printf("subarray: %d to %d\n",i,j);
+                found=1;
+                printf("the subarray is\n");
+                for(k=i;k<=j;k++){
+                    printf("%d ",a[k]);
+                }
+                printf("\n");
+            }
+        }
+    }
+    if(!found){
+        printf("no subarray");
+    }
+}
+int main(){
+    int n;
+    printf("enter array size:");
+    scanf("%d",&n);
+    int a[n];
+    printf("enter elements:");
+    for(int i=0;i<n;i++){
+        scanf("%d",&a[i]);
+    }
+    printf("enter the target value:");
+    int target;
+    scanf("%d",&target);
+    subarray(a,n,target);
+    return 0;
+}
+//
