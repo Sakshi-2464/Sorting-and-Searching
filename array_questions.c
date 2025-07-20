@@ -670,4 +670,34 @@ int main(){
     printf("no pairs");}
     return 0;
 }
-//
+// 3-sum
+#include<stdio.h>
+int main(){
+    int n,i,j,k;
+    printf("enter size of array:\n");
+    scanf("%d",&n);
+    int a[n];
+    printf("enter elements:\n");
+    for(i=0;i<n;i++){
+        scanf("%d",&a[i]);
+    }
+    int target;
+    printf("enter the target sum\n");
+    scanf("%d",&target);
+    int found=0;
+    for(i=0;i<n;i++){
+        for(j=i+1;j<n;j++){
+            for(k=j+1;k<n;k++){
+                if(a[i]+a[j]+a[k]==target){
+                    printf("indices: %d %d %d\n",i,j,k);
+                    printf("values: %d %d %d\n",a[i],a[j],a[k]);
+                    found=1;
+                }
+            }
+        }
+    }
+    if(!found){
+        printf("no combinations\n");
+    }
+    return 0;
+}
