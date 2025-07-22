@@ -9,10 +9,10 @@ int result;
 
     while (l<=r){
         int mid=l+(r-l)/2;
-        if(mid*mid==x){
+        if(mid*mid==x){  // mid*mid may cause integer overflow so in such a case use mid==x/mid
             return mid;
         }
-        else if(mid*mid<x){
+        else if(mid*mid<x){  // mid*mid may cause interger overflow so in such a case use mid<x/mid
             l=mid+1;
             result= mid;
         }
