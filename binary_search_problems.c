@@ -30,3 +30,34 @@ int main(){
     printf("square root for %d is %d",n,root);
   return 0;
 }
+
+// check if the given number is a perfect square using binary search
+#include<stdio.h>
+#include<stdbool.h>
+bool checkPerfectSquare(int n) {
+    int l=0;
+    int r=n;
+    if(n<0) return false;
+    while(l<=r){
+        long mid=l+(r-l)/2; 
+        if(mid*mid==n)  // here we use long to prevent overflow --
+        return true;
+        else if (mid*mid<n) l=mid+1;
+        else r=mid-1;
+    }
+return false;
+}
+int main(){
+    int n;
+    printf("enter the value:");
+    scanf("%d",&n);
+    bool root=checkPerfectSquare(n);
+    if(!root){
+        printf("not a perfect square");
+    }
+    else{
+        printf("perfect square");
+    }
+    return 0;
+}
+//
