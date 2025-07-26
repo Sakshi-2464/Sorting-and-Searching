@@ -60,4 +60,5 @@ int main(){
     }
     return 0;
 }
-//
+// get the count of negative nubers in 2d array sorted in descending order
+
