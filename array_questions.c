@@ -739,4 +739,27 @@ int main(){
     subarray(a,n,target);
     return 0;
 }
+// 2d arrays - taking user input and displaying the matrix
+#include <stdio.h>
+int main() {
+    int rows,cols,i,j;
+    printf("enter number of rows:");
+    scanf("%d",&rows);
+    printf("enter number of columns:");
+    scanf("%d",&cols);
+    int a[rows][cols];
+    printf("enter the values:");
+    for(i=0;i<rows;i++){
+        for(j=0;j<cols;j++){
+            scanf("%d",&a[i][j]);
+        }
+    }
+    for(i=0;i<rows;i++){
+        for(j=0;j<cols;j++){
+            printf(" %d",a[i][j]);
+        }
+        printf("\n");
+    }
+    return 0;
+}
 //
