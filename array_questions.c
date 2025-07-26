@@ -839,4 +839,39 @@ int main() {
     }
     return 0;
 }
+// transpose of matrix
+#include <stdio.h>
+int main() {
+    int rows,cols,i,j;
+    printf("enter number of rows:");
+    scanf("%d",&rows);
+    printf("enter number of columns:");
+    scanf("%d",&cols);
+    int a[rows][cols];
+    printf("enter the values row-wise:");
+    for(i=0;i<rows;i++){
+        for(j=0;j<cols;j++){
+            scanf("%d",&a[i][j]);
+        }
+    }
+    for(i=0;i<rows;i++){
+        for(j=0;j<cols;j++){
+                printf("%d\t",a[i][j]);
+            }
+            printf("\n");
+    }
+    int t[cols][rows];
+    for(i=0;i<rows;i++){
+        for(j=0;j<cols;j++){
+            t[j][i]=a[i][j];
+        }
+    }
+    for(i=0;i<cols;i++){
+        for(j=0;j<rows;j++){
+                printf("%d\t",t[i][j]);
+            }
+            printf("\n");
+    }
+    return 0;
+}
 //
