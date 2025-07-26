@@ -801,4 +801,42 @@ int main() {
     }
     return 0;
 }
+// to get row sum and column sum in 2d array
+#include <stdio.h>
+int main() {
+    int rows,cols,i,j;
+    printf("enter number of rows:");
+    scanf("%d",&rows);
+    printf("enter number of columns:");
+    scanf("%d",&cols);
+    int a[rows][cols];
+    printf("enter the values row-wise:");
+    for(i=0;i<rows;i++){
+        for(j=0;j<cols;j++){
+            scanf("%d",&a[i][j]);
+        }
+    }
+    for(i=0;i<rows;i++){
+        for(j=0;j<cols;j++){
+                printf("%d\t",a[i][j]);
+            }
+            printf("\n");
+    }
+    int count=0;
+    for(i=0;i<rows;i++){
+        for(j=0;j<cols;j++){
+            count=count+a[i][j];
+        }
+        printf("sum of the elements in row %d = %d\n",i+1,count);
+        count=0;
+    }
+    for(j=0;j<cols;j++){
+        for(i=0;i<rows;i++){
+            count=count+a[i][j];
+        }
+        printf("sum of the elements in column %d = %d\n",j+1,count);
+        count=0;
+    }
+    return 0;
+}
 //
