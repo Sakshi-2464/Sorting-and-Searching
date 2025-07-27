@@ -313,3 +313,42 @@ int main() {
     mat_sub(rows,cols,n,matrices); // function call
     return 0;
 }
+// check if matrix is symmetric
+#include <stdio.h>
+#include<stdbool.h>
+int main() {
+    bool res=true;
+    int rows,cols;
+    printf("enter the number of rows:");
+    scanf("%d",&rows);
+    printf("enter number of columns:");
+    scanf("%d",&cols);
+    int a[rows][cols];
+       if (rows != cols) {
+        printf("Matrix is not square, so it cannot be symmetric.\n");
+        return 0;
+    }
+    printf("enter the values:\n");
+    for(int i=0;i<rows;i++){
+        for(int j=0;j<cols;j++){
+            scanf("%d",&a[i][j]);
+        }
+    }
+    for(int i=0;i<rows;i++){
+        for(int j=0;j<cols;j++){
+            if(a[i][j]!=a[j][i]){
+                res=false;
+                break;
+            }
+        }
+        if (!res) break;
+    }
+    if(!res){
+        printf("not symmetric");
+    }
+    else{
+        printf("symmetric");
+    }
+    return 0;
+}
+//
