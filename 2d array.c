@@ -232,4 +232,84 @@ int main() {
     }
     return 0;
 }
-//
+// matrix addition and subtraction user input multiple matrices
+#include <stdio.h>
+// matrix addtion function
+void mat_add(int rows, int cols,int n, int matrices[n][rows][cols]){
+    int res[rows][cols];
+    for(int i=0;i<rows;i++){
+        for(int j=0;j<cols;j++){
+            res[i][j]=0; // initialize the result matrix with 0
+        }
+    }
+    // k- matrix number
+    // i- row number
+    // j- column number
+    for(int k=0;k<n;k++){
+        for(int i=0;i<rows;i++){
+            for(int j=0;j<cols;j++){
+                res[i][j]+=matrices[k][i][j]; //just keep adding the values to result matrix
+            }
+        }
+    }
+    printf("addtion:\n");
+        for(int i=0;i<rows;i++){
+            for(int j=0;j<cols;j++){
+                printf("%d\t",res[i][j]);
+            }
+            printf("\n");
+        }
+}
+// subtraction function
+void mat_sub(int rows, int cols,int n, int matrices[n][rows][cols]){
+    int res[rows][cols];
+    for(int i=0;i<rows;i++){
+        for(int j=0;j<cols;j++){
+            res[i][j]=matrices[0][i][j]; // strore the first matrix in result
+        }
+    }
+    for(int k=1;k<n;k++){ // start with the 2nd matrix as 1st is stored in result
+        for(int i=0;i<rows;i++){
+            for(int j=0;j<cols;j++){
+                res[i][j]-=matrices[k][i][j]; // subtract rest of the matrix from the 1st matrix
+            }
+        }
+    }
+    printf("subtraction:\n");
+        for(int i=0;i<rows;i++){
+            for(int j=0;j<cols;j++){
+                printf("%d\t",res[i][j]);
+            }
+            printf("\n");
+        }
+}
+int main() {
+    int rows,cols,i,j,k,n;
+    printf("enter the number of matrices:");
+    scanf("%d",&n);
+    printf("enter the number of rows:");
+    scanf("%d",&rows);
+    printf("enter number of columns:");
+    scanf("%d",&cols);
+    int matrices[n][rows][cols];
+    for(k=0;k<n;k++){
+        printf("enter the values for matrix %d ",k+1);
+        for(int i=0;i<rows;i++){
+            for(int j=0;j<cols;j++){
+                scanf("%d",&matrices[k][i][j]);
+            }
+        }
+    }
+    for(k=0;k<n;k++){
+        printf("matrix %d\n",k+1);
+        for(int i=0;i<rows;i++){
+            for(int j=0;j<cols;j++){
+                printf("%d\t",matrices[k][i][j]);
+            }
+            printf("\n");
+        }
+    }
+    mat_add(rows,cols,n,matrices); // function call
+    mat_sub(rows,cols,n,matrices); // function call
+    return 0;
+}
