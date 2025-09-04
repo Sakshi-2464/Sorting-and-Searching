@@ -120,7 +120,7 @@ int main() {
             printf("\n");
     }
     int row_sum = 0, col_sum = 0;
-    int max_row_sum = 0, max_col_sum = 0;
+    int max_row_sum = INT_MIN, max_col_sum = INT_MIN;
     int max_row_index = 0, max_col_index = 0;
     for(i=0;i<rows;i++){
         for(j=0;j<cols;j++){
