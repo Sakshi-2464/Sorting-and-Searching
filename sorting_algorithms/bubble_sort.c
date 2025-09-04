@@ -11,7 +11,7 @@ int main(){
         scanf("%d",&a[i]);
     }
     // bubble sort
-    for(i=0;i<n;i++){
+    for(i=0;i<n-1;i++){
         // loop to traverse through the whole array
         // in each pass the largest elememt move to the end of the unsorted array
         for(j=0;j<n-1-i;j++){
