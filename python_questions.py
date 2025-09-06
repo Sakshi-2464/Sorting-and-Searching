@@ -28,4 +28,39 @@ h=hex(n)[2:].zfill(8)
 print(int(h[::-1],16))
 o=oct(n)[2:]
 print(int(o[::-1],8))
+
+#counting the bits
+a=5
+c=[]
+for i in range(a+1):
+    c.append(bin(i)[2:].count("1"))
+print(c)
+
+'''
+a=5
+0->0 -> no.of 1->0
+1->1 -> no.of 1->1
+2->10 -> no.of 1->1
+3->11 -> no.of 1->2
+4->100 -> no.of 1->1
+5->101 -> no.of 1->2
+output: [0,1,1,2,1,2]
+'''
+
+a=5
+c=[]
+for i in range(a+1):
+    c.append(bin(i)[2:].count("0"))
+print(c)
+
+'''
+a=5
+0->0 -> no.of 0->1
+1->1 -> no.of 0->0
+2->10 -> no.of 0->1
+3->11 -> no.of 0->0
+4->100 -> no.of 0->2
+5->101 -> no.of 0->1
+output: [1,0,1,0,2,1]
+'''
 # check if number is prime
