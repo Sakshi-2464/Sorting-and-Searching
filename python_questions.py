@@ -63,4 +63,48 @@ a=5
 5->101 -> no.of 0->1
 output: [1,0,1,0,2,1]
 '''
+# sum of all elements in array
+a=[1,4,5,2]
+c=0
+for i in a:
+    c=c+i
+print(c)
+# append even and odd number in diff array
+a=[1,4,6,7,77,89,0,5,2]
+e=[]
+o=[]
+for i in a:
+    if i%2==0:e.append(i)
+    else:o.append(i)
+print(e)
+print(o)
+# sum of even elements and odd elements
+a=[1,4,6,0,5,2]
+e=0
+o=0
+for i in a:
+    if i%2==0:e+=i
+    else:o+=i
+print(e)
+print(o)
+# number of elements at odd index and even index
+a=[1,4,6,5,2]
+e=0
+o=0
+for i in range(len(a)):
+    if i%2==0:e+=1
+    else:o+=1
+print(e)
+print(o)
+# min and max element in an array
+a=[10,5,8,90,72,4]
+min=max=a[0]
+for i in a:
+    if i<min:
+        min=i
+    elif i>max:
+        max=i
+print(min)
+print(max)
+# 
 # check if number is prime
