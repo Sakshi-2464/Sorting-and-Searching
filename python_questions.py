@@ -1,3 +1,68 @@
+# insertion sort
+a=[4,5,1,0,6,9,2,3,5]
+for j in range(1,(len(a))):
+    key=a[j]
+    i=j-1
+    while i>=0 and a[i]>key:
+        a[i+1]=a[i]
+        i-=1
+    a[i+1]=key
+print(a)
+
+# selection sort
+a=[4,5,1,0,6,9,2,3,5]
+for i in range(len(a)):
+    smallest=i
+    for j in range(i+1,len(a)):
+        if a[j]<a[smallest]:
+            smallest=j
+    a[i],a[smallest]=a[smallest],a[i]
+print(a)
+
+# bubble sort
+a=[4,5,1,0,6,9,2,3,5]
+for i in range(len(a)):
+    for j in range(0,len(a)-i-1):
+        if a[j]>a[j+1]:
+            a[j],a[j+1]=a[j+1],a[j]
+print(a)
+
+# quick sort
+a=[4,5,1,0,6,9,2,3,5]
+def quick_sort(arr):
+    if len(arr)<=1:
+        return arr
+    pivot=arr[len(arr)//2]
+    left=[x for x in arr if x<pivot]
+    right=[x for x in arr if x>pivot]
+    middle=[x for x in arr if x==pivot]
+    return quick_sort(left)+middle+quick_sort(right)
+print(quick_sort(a))
+
+# merge sort
+a=[4,5,1,0,6,9,2,3,5]
+def merge_sort(arr):
+    if len(arr)<=1:
+        return arr
+    mid = len(arr) // 2
+    left = merge_sort(arr[:mid])
+    right = merge_sort(arr[mid:])
+    return merge(left,right)
+def merge(left,right):
+    res=[]
+    i=j=0
+    while i<len(left) and j<len(right):
+        if left[i]<right[j]:
+            res.append(left[i])
+            i+=1
+        else:
+            res.append(right[j])
+            j+=1
+    res.extend(left[i:])
+    res.extend(right[j:])
+    return res
+print(merge_sort(a))
+
 # check for palindrome
 a='madam'
 print(a==a[::-1])
