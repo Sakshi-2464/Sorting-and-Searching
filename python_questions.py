@@ -245,3 +245,17 @@ So, if no divisor is found up to √n, the number must be prime.
                 return False
         return True
 print(prime(48))
+
+# reverse the digits in number
+n=127
+rev=0
+while n>0:
+    rev=rev*10+n%10
+    n=n//10
+print(rev)
+
+# reverse digits in number one line code
+n=127
+print(int(str(n)[::-1]))
+
+#
