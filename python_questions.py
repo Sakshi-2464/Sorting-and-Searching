@@ -39,6 +39,21 @@ a,b=b,a
 print(a)
 print(b)
 
+# linear search
+a=[4,8,2,4,1,7]
+index=[]
+target=4
+for i in range(len(a)):
+    if a[i]==target:
+        index.append(i)
+        found=1
+if index:
+    print(index)
+else:
+    print('not found')
+
+# binary search
+
 # reverse the bits
 b=bin(n)[2:].zfill(32) # convert decimal number to binary we use [2:] as we do not need 0b in the binary representation
 #then we use z.fill(32) for the proper 32 bit representation of the number with the leading zeros
