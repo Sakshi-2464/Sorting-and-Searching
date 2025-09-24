@@ -97,7 +97,7 @@ for i in range(len(a)):
 print(maximum)
 print(second)
 
-# factorial - recurssion
+# factorial - recursion
 def fact(n):
     if n==0 or n==1:
         return 1
@@ -112,6 +112,14 @@ def fact(n):
         fact*=i
     return fact
 print(fact(7))
+
+# fibonacci
+def fibonacci(n):
+    fib=[0,1]
+    for i in range(2,n):
+        fib.append(fib[-1]+fib[-2])
+    return fib[:n]
+print(fibonacci(10))
 
 # swapping without 3rd variable
 a=10
