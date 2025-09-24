@@ -20,6 +20,18 @@ print(rev)
 s='loop'
 print(s[1:]+s[0])
 
+# finding 2nd largest element
+a=[4,55,2,4,1,7]
+second=maximum=a[0]
+for i in range(len(a)):
+    if a[i]>maximum:
+        second=maximum
+        maximum=a[i]
+    elif a[i]>second and a[i]!=maximum:
+        second=a[i]
+print(maximum)
+print(second)
+
 # swapping without 3rd variable
 a=10
 b=20
