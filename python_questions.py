@@ -16,6 +16,10 @@ for i in s:
     rev=i+rev
 print(rev)
 
+# reverse str
+s='loop'
+print(s[1:]+s[0])
+
 # swapping without 3rd variable
 a=10
 b=20
