@@ -9,6 +9,13 @@ print( ''.join(reversed(a)))
 #method 2
 print(a[::-1])
 
+# reverse string
+s='loop'
+rev=""
+for i in s:
+    rev=i+rev
+print(rev)
+
 # swapping without 3rd variable
 a=10
 b=20
