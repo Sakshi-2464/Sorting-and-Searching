@@ -235,3 +235,13 @@ print(min)
 print(max)
 # 
 # check if number is prime
+def prime(n):
+    if n<=1:
+        return False
+    else:
+        for i in range(2,int(n**0.5)+1): # If n has any divisor other than 1 and itself, at least one divisor lies in the range [2, √n] hence, we take n**0.5
+So, if no divisor is found up to √n, the number must be prime.
+            if n%i==0:
+                return False
+        return True
+print(prime(48))
