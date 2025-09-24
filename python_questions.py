@@ -97,6 +97,22 @@ for i in range(len(a)):
 print(maximum)
 print(second)
 
+# factorial - recurssion
+def fact(n):
+    if n==0 or n==1:
+        return 1
+    else:
+        return n*fact(n-1)
+print(fact(5))
+
+# factorial - iterative
+def fact(n):
+    fact=1
+    for i in range(1,n+1):
+        fact*=i
+    return fact
+print(fact(7))
+
 # swapping without 3rd variable
 a=10
 b=20
