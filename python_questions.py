@@ -240,7 +240,7 @@ def prime(n):
         return False
     else:
         for i in range(2,int(n**0.5)+1): # If n has any divisor other than 1 and itself, at least one divisor lies in the range [2, √n] hence, we take n**0.5
-So, if no divisor is found up to √n, the number must be prime.
+# So, if no divisor is found up to √n, the number must be prime.
             if n%i==0:
                 return False
         return True
@@ -258,4 +258,19 @@ print(rev)
 n=127
 print(int(str(n)[::-1]))
 
-#
+# longst common prefix
+def longestCommonPrefix(self, strs: List[str]) -> str:
+        if not strs:
+            return ""
+        strs.sort()
+        prefix=""
+        first=strs[0]
+        last=strs[-1]
+        for i in range(len(first)):
+            if i<len(last) and first[i]==last[i]:
+                prefix+=first[i]
+            else:
+                break
+        return prefix 
+# Input: strs = ["flower","flow","flight"]
+# Output: "fl"
