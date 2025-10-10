@@ -274,3 +274,23 @@ def longestCommonPrefix(self, strs: List[str]) -> str:
         return prefix 
 # Input: strs = ["flower","flow","flight"]
 # Output: "fl"
+
+# converting sorted elements to binary earch tree
+# Definition for a binary tree node.
+# class TreeNode:
+#    def __init__(self, val=0, left=None, right=None):
+#       self.val = val
+#       self.left = left
+#       self.right = right
+class Solution:
+    def sortedArrayToBST(self, nums: List[int]) -> Optional[TreeNode]:
+        def tree_construct(left,right):
+            if left>right:
+                return None
+            mid=(left+right)//2
+            root=TreeNode(nums[mid])
+            root.left=tree_construct(left,mid-1)
+            root.right=tree_construct(mid+1,right)
+            return root
+        return tree_construct(0,len(nums)-1)
+        
